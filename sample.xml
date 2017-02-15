@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><root><object type="People"><field id="name" type="String" value="John"/><field id="age" type="int" value="24"/><field id="salary" type="double" value="50000.0"/></object><object type="People"><field id="name" type="String" value="Anna"/><field id="age" type="int" value="30"/><field id="salary" type="double" value="20000.0"/></object><object type="People"><field id="name" type="String" value="Kate"/><field id="age" type="int" value="34"/><field id="salary" type="double" value="100000.0"/></object></root>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <object type="Animal">
+        <field id="view" type="String" value="Dog"/>
+        <field id="name_pet" type="String" value="MyMy"/>
+        <field id="name_owner" type="String" value="Gerasim"/>
+        <field id="age" type="Integer" value="5"/>
+    </object>
+</root>

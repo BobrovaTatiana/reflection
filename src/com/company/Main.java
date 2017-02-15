@@ -11,36 +11,45 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.IOException;
 
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException {
 
-        People peoples[] = new People[3];
-        for (int i = 0; i < peoples.length; i++) {
-            peoples[i] = new People();
-        }
+//        People peoples[] = new People[3];
+//        for (int i = 0; i < peoples.length; i++) {
+//            peoples[i] = new People();
+//        }
+//
+//
+//        peoples[0].setName("John");
+//        peoples[0].setAge(24);
+//        peoples[0].setSalary(50000);
+//
+//        peoples[1].setName("Anna");
+//        peoples[1].setAge(30);
+//        peoples[1].setSalary(20000);
+//
+//        peoples[2].setName("Kate");
+//        peoples[2].setAge(34);
+//        peoples[2].setSalary(100000);
 
+            ClassLoader loader= new JarClassLoader();
 
-        peoples[0].setName("John");
-        peoples[0].setAge(24);
-        peoples[0].setSalary(50000);
+            Class clazz = Class.forName("Animal",true,loader);
+            Object AnimalClass = clazz.newInstance();
 
-        peoples[1].setName("Anna");
-        peoples[1].setAge(30);
-        peoples[1].setSalary(20000);
-
-        peoples[2].setName("Kate");
-        peoples[2].setAge(34);
-        peoples[2].setSalary(100000);
+            Object animals[] = new Object[1];
+            animals[0] = AnimalClass;
 
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
             Document doc = docBuilder.newDocument();
 
-            ToXML.process(peoples, doc);
+            ToXML.process(animals, doc);
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
