@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<root>
-    <object type="Animal">
-        <field id="view" type="String" value="Dog"/>
-        <field id="name_pet" type="String" value="MyMy"/>
-        <field id="name_owner" type="String" value="Gerasim"/>
-        <field id="age" type="Integer" value="5"/>
-    </object>
-</root>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root><object type="Animal"><field id="type" type="String" value="Собака"/><field id="name" type="String" value="Бобик"/><field id="age" type="Integer" value="6"/></object></root>

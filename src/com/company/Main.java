@@ -18,25 +18,9 @@ public class Main {
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException {
 
-//        People peoples[] = new People[3];
-//        for (int i = 0; i < peoples.length; i++) {
-//            peoples[i] = new People();
-//        }
-//
-//
-//        peoples[0].setName("John");
-//        peoples[0].setAge(24);
-//        peoples[0].setSalary(50000);
-//
-//        peoples[1].setName("Anna");
-//        peoples[1].setAge(30);
-//        peoples[1].setSalary(20000);
-//
-//        peoples[2].setName("Kate");
-//        peoples[2].setAge(34);
-//        peoples[2].setSalary(100000);
+        JarClassLoader.downloadFiles();
 
-            ClassLoader loader= new JarClassLoader();
+        ClassLoader loader= new JarClassLoader();
 
             Class clazz = Class.forName("Animal",true,loader);
             Object AnimalClass = clazz.newInstance();

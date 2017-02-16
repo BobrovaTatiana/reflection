@@ -18,16 +18,17 @@ public class ToXML {
 
             Element objectElement = doc.createElement("object");
             rootElement.appendChild(objectElement);
-            objectElement.setAttribute("type", people.getClass().getSimpleName());//
-            Field[] fields = people.getClass().getDeclaredFields();//
+            objectElement.setAttribute("type", people.getClass().getSimpleName());
+            Field[] fields = people.getClass().getDeclaredFields();
                 for (Field field : fields) {
                     Element el = doc.createElement("field");
                     objectElement.appendChild(el);
                     el.setAttribute("type", field.getType().getSimpleName());
                     el.setAttribute("id", field.getName());
                     field.setAccessible(true);
-                    el.setAttribute("value", field.get(people).toString());//
+                    el.setAttribute("value", field.get(people).toString());
             }
         }
     }
+
 }
